@@ -6,6 +6,10 @@ import base64
 from pathlib import Path
 import pyttsx3
 import time
+import platform
+
+if platform.system() == "Linux":
+    os.system('apt-get install -y espeak')
 
 # 应用标题和配置
 st.set_page_config(page_title="英语单词背诵工具", layout="wide")
